@@ -100,7 +100,7 @@ function je_add_config(){
 						</tr>";
 
 				echo "	</table>
-					<p class='submit'><input class="button-primary" type='submit' name='Submit' value='Add' /></p>
+					<p class='submit'><input class='button-primary' type='submit' name='Submit' value='Add' /></p>
 				</form>
 		  </div>";
 }
