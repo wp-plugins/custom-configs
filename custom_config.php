@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Configs
 Plugin URI: http://jacobanderic.com
-Description: Lets you create configuration parameters that you can then update and easily use in your theme using <?php get_config('KEY'); ?>.
+Description: Lets you create configuration parameters that you can then update and easily use in your theme using `<?php get_config('KEY'); ?>`.
 Version: 1.2
 Author: Jacob Guite-St-Pierre
 Author URI: http://jacobanderic.com
