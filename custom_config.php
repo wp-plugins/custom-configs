@@ -12,7 +12,7 @@ Author URI: http://jacobanderic.com
 global $wpdb;
 define('CONFIG_TABLE', $wpdb->prefix . 'je_custom_config');
 
-register_activation_hook('custom_config.php', 'je_setup');
+register_activation_hook('custom-configs/custom_config.php', 'je_setup');
 
 function je_setup() {
 	global $wpdb;
