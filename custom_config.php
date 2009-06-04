@@ -2,8 +2,8 @@
 /*
 Plugin Name: Custom Configs
 Plugin URI: http://jacobanderic.com
-Description: Lets you create configuration parameters that you can then update and easily use in your theme using `<?php get_config('KEY'); ?>`.
-Version: 1.2
+Description: Lets you create configuration parameters that you can then update and easily use in your theme using `<?php get_config('KEY'); ?>`. Simple, but efficient.
+Version: 1.3
 Author: Jacob Guite-St-Pierre
 Author URI: http://jacobanderic.com
 */
@@ -12,7 +12,7 @@ Author URI: http://jacobanderic.com
 global $wpdb;
 define('CONFIG_TABLE', $wpdb->prefix . 'je_custom_config');
 
-register_activation_hook('custom-configs/custom_config.php', 'je_setup');
+register_activation_hook(__FILE__, 'je_setup');
 
 function je_setup() {
 	global $wpdb;
