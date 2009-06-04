@@ -45,7 +45,7 @@ function je_list_configs(){
 				$wpdb->query($sql);
 			}
 		}
-		if (!empty($_POST['je_name']) && !empty($_POST['je_key']) && !empty($_POST['je_value'])) {
+		if (!empty($_POST['je_name']) && !empty($_POST['je_key'])) {
 			$sql = "insert into ".CONFIG_TABLE." set slug='".$_POST['je_key']."', niceName='".$_POST["je_name"]."', value='".$_POST["je_value"]."'";
 			$wpdb->query($sql);
 		}
