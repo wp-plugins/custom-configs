@@ -83,7 +83,7 @@ function je_list_configs(){
 						}
 				
 					echo "</table>
-					<p class='submit'><input type='submit' name='Submit' value='Update' /></p>
+					<p class='submit'><input type='submit' name='Submit' value='Update Configs' /></p>
 				</form>
 				<p><em>To use a Custom Config use the function get_config('KEY','DEFAULT VALUE'); in your theme.</em></p>
 		  	</div>";
@@ -112,7 +112,7 @@ function je_custom_configs_add(){
 							<td><input name='je_value' type='text' id='je_value' value='' size='45'  /></td>
 						</tr>
 					</table>
-					<p class='submit'><input class='button-primary' type='submit' name='Submit' value='Add' /></p>
+					<p class='submit'><input class='button-primary' type='submit' name='Submit' value='Add Config' /></p>
 				</form>
 		  </div>";
 }
