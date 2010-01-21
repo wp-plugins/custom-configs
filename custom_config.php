@@ -85,7 +85,7 @@ function je_list_configs(){
 					echo "</table>
 					<p class='submit'><input type='submit' name='Submit' value='Update' /></p>
 				</form>
-				<p><em>To use a Custom Config use the function get_config('KEY','DEFAULT VALUE');</em></p>
+				<p><em>To use a Custom Config use the function get_config('KEY','DEFAULT VALUE'); in your theme.</em></p>
 		  	</div>";
 		  
 	je_custom_configs_add();
@@ -100,15 +100,15 @@ function je_custom_configs_add(){
 					<input type='hidden' name='status' value='add'>
 					<table class='form-table'>
 						<tr valign='top'>
-							<th scope='row'><label for='je_name'>Name : </label></th>
+							<th scope='row'><label for='je_name'>Name: </label></th>
 							<td><input name='je_name' type='text' id='je_name' value='' size='45'  /></td>
 						</tr>
 						<tr valign='top'>
-							<th scope='row'><label for='je_key'>Key (unique) : </label></th>
+							<th scope='row'><label for='je_key'>Key (unique): </label></th>
 							<td><input name='je_key' type='text' id='je_key' value='' size='45'  /></td>
 						</tr>
 						<tr valign='top'>
-							<th scope='row'><label for='je_value'>Value : </label></th>
+							<th scope='row'><label for='je_value'>Value: </label></th>
 							<td><input name='je_value' type='text' id='je_value' value='' size='45'  /></td>
 						</tr>
 					</table>
