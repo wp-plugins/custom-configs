@@ -85,7 +85,7 @@ function je_list_configs(){
 					echo "</table>
 					<p class='submit'><input type='submit' name='Submit' value='Update' /></p>
 				</form>
-				<p><em>To use a Custom Config use the function get_config('KEY','DEFAULT VALUE');</em></p>
+				<p><em>To use a Custom Config use the function get_config('KEY','DEFAULT VALUE'); in your theme.</em></p>
 		  	</div>";
 		  
 	je_custom_configs_add();
