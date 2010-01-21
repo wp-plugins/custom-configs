@@ -41,9 +41,9 @@ function je_list_configs(){
 	if(isset($_POST["action"])){
 		echo "<br />";
 		if ($_POST["status"] == "update")
-			echo "<div class='updated'><h3>Values Updated</h3></div>";
+			echo "<div class='updated'>Values Updated</div>";
 		else
-				echo "<div class='updated'><h3>Config Added</h3></div>";
+				echo "<div class='updated'>Config Added</div>";
 				
 		foreach($_POST as $key => $value){
 			$delete = str_replace("je_","je_delete_",$key);
