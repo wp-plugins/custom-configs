@@ -100,15 +100,15 @@ function je_custom_configs_add(){
 					<input type='hidden' name='status' value='add'>
 					<table class='form-table'>
 						<tr valign='top'>
-							<th scope='row'><label for='je_name'>Name : </label></th>
+							<th scope='row'><label for='je_name'>Name: </label></th>
 							<td><input name='je_name' type='text' id='je_name' value='' size='45'  /></td>
 						</tr>
 						<tr valign='top'>
-							<th scope='row'><label for='je_key'>Key (unique) : </label></th>
+							<th scope='row'><label for='je_key'>Key (unique): </label></th>
 							<td><input name='je_key' type='text' id='je_key' value='' size='45'  /></td>
 						</tr>
 						<tr valign='top'>
-							<th scope='row'><label for='je_value'>Value : </label></th>
+							<th scope='row'><label for='je_value'>Value: </label></th>
 							<td><input name='je_value' type='text' id='je_value' value='' size='45'  /></td>
 						</tr>
 					</table>
