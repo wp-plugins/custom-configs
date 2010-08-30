@@ -34,9 +34,7 @@ define('CONFIG_TABLE', $wpdb->prefix . 'je_custom_config'); // defines plugin ta
 function je_custom_configs_setup() { // init function, checks if DB exists and create it otherwise
 	global $wpdb;
 	if ($wpdb->get_var("show tables like '" . CONFIG_TABLE . "'") != CONFIG_TABLE) {
-		$create_table = "create table ".CONFIG_TABLE." (slug varchar (255) , value text ,niceName varchar (255))";
-		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-		dbDelta($create_table);
+		$wpdb->query("create table ".CONFIG_TABLE." (slug varchar (255) , value text ,niceName varchar (255))");
 	}
 }
 register_activation_hook(__FILE__, 'je_custom_configs_setup');
