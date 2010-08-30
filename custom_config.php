@@ -54,9 +54,9 @@ function je_custom_configs_help_text($text) { // help text for page
 		<div class="metabox-prefs">
     		<p>To use a Custom Setting, use the function <em>string get_config( $key [, $default_value])</em> in your theme.</p>
     		<p>The <em>$default_value</em> parameter is optional, but will be used if the specified setting cannot be found.</p>
-    		<p>The function returns a strong so don\'t forget to precede it by an <em>echo</em> if you want to output it.</p>
+    		<p>The function returns a string so don\'t forget to precede it by an <em>echo</em> if you want to output it.</p>
     		<p><strong>Example:</strong></p>
-    		<p>Twitter: <?php echo get_config("twitter","jacobanderic"); ?></p>
+    		<p>Twitter: &#60;?php echo get_config("twitter","jacobanderic"); ?&#62;</p>
     		<p><strong>For more information:</strong></p>
     		<p><a href="http://wordpress.org/extend/plugins/custom-configs/" target="_blank">WordPress Plugin Page</a></p>
     		<p><a href="http://jacobanderic.com" target="_blank">Jacob & Eric</a></p>
@@ -151,7 +151,7 @@ function je_custom_configs_add() {
 							<td><input type="text" name="add_name" id="add_name" value="" class="regular-text" /></td>
 						</tr>
 						<tr valign="top">
-							<th scope="row"><label for="add_key">Key (unique)</label></th>
+							<th scope="row"><label for="add_key">Key <em>(must be unique)</em></label></th>
 							<td><input type="text" name="add_key" id="add_key" value="" class="regular-text" /></td>
 						</tr>
 						<tr valign="top">
