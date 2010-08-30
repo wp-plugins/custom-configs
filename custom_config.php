@@ -4,7 +4,7 @@ Plugin Name: Custom Settings
 Plugin URI: http://jacobanderic.com
 Description: Allows you to create custom settings that you can easily update via the administration panel in Settings > Custom Settings and also allow you to use mentioned settings in your theme using a simple PHP function: string get_config( $key [, $default_value]). Very simple, yet efficient.
 Version: 1.6
-Author: Jacob & Eric, Jacob Guite-St-Pierre
+Author: Jacob & Eric
 Author URI: http://jacobanderic.com
 */
 
