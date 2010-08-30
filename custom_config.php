@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Settings
 Plugin URI: http://jacobanderic.com
-Description: Allows you to create custom settings that you can easily update via the administration panel in Settings > Custom Settings and also allow you to use mentioned settings in your theme using a simple PHP function: `<?php echo get_config('KEY','DEFAULT VALUE'); ?>`. Very simple, yet efficient.
+Description: Allows you to create custom settings that you can easily update via the administration panel in Settings > Custom Settings and also allow you to use mentioned settings in your theme using a simple PHP function: string get_config( $key [, $default_value]). Very simple, yet efficient.
 Version: 1.6
 Author: Jacob & Eric, Jacob Guite-St-Pierre
 Author URI: http://jacobanderic.com
@@ -36,7 +36,7 @@ function je_custom_configs_setup() { // init function, checks if DB exists and c
 	if ($wpdb->get_var("show tables like '" . CONFIG_TABLE . "'") != CONFIG_TABLE) {
 		$create_table = "create table ".CONFIG_TABLE." (slug varchar (255) , value text ,niceName varchar (255))";
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-		dbDelta($sql);
+		dbDelta($create_table);
 	}
 }
 register_activation_hook(__FILE__, 'je_custom_configs_setup');
@@ -54,8 +54,11 @@ function je_custom_configs_help_text($text) { // help text for page
 	if ($_GET['page'] == 'custom_configs' ) {
     	$text = '
 		<div class="metabox-prefs">
-    		<p>To use a Custom Setting, use the function <em>get_config("KEY","DEFAULT VALUE")</em> in your theme.</p>
-    		<p>Don\'t forget to precede it by an <em>echo</em> if you want to output it.</p>
+    		<p>To use a Custom Setting, use the function <em>string get_config( $key [, $default_value])</em> in your theme.</p>
+    		<p>The <em>$default_value</em> parameter is optional, but will be used if the specified setting cannot be found.</p>
+    		<p>The function returns a strong so don\'t forget to precede it by an <em>echo</em> if you want to output it.</p>
+    		<p><strong>Example:</strong></p>
+    		<p>Twitter: <?php echo get_config("twitter","jacobanderic"); ?></p>
     		<p><strong>For more information:</strong></p>
     		<p><a href="http://wordpress.org/extend/plugins/custom-configs/" target="_blank">WordPress Plugin Page</a></p>
     		<p><a href="http://jacobanderic.com" target="_blank">Jacob & Eric</a></p>
