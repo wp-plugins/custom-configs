@@ -152,7 +152,7 @@ function je_custom_configs_list() { // Custom Settings page
 		echo '
 		<tr'.$clsalt.'>
 			<th class="check-column"><input type="checkbox" name="delete_'.$field->slug.'" id="delete_'.$field->slug.'" /></th>
-			<td class="post-title"><label for="'.$field->slug.'" style="text-transform:capitalize;">'.$field->niceName.'</label></td>';
+			<td class="post-title"><label for="'.$field->slug.'" style="display:block;text-transform:capitalize;">'.$field->niceName.'</label></td>';
 			
 			if (strlen($field->value) > 80)
 				echo '<td><textarea name="'.$field->slug.'" id="'.$field->slug.'" rows="4" cols="10" style="width: 90%;">'.htmlspecialchars($field->value).'</textarea></td>';
