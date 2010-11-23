@@ -78,7 +78,7 @@ function je_custom_configs_list() { // Custom Settings page
 		echo "<div class='updated'><p><strong>";
 		
 		// generate feedback update texts
-		elseif ($_POST["status"] == "add" && !empty($_POST['add_name']) && !empty($_POST['add_key']))
+		if ($_POST["status"] == "add" && !empty($_POST['add_name']) && !empty($_POST['add_key']))
 			_e('Setting added.');
 		elseif ($_POST["status"] == "uninstall" && isset($_POST[je_uninstall_confirm]))
 			_e('All settings were successfully deleted. To complete uninstalling <em>Custom Settings</em>, uninstall the plugin from the <a href="'.get_bloginfo('wpurl').'/wp-admin/plugins.php">Plugins page</a>.');
@@ -116,7 +116,7 @@ function je_custom_configs_list() { // Custom Settings page
 	endif;
 	
 	// Settings list
-	echo '<div class="wrap"><div id="icon-options-general" class="icon32"><br /></div>';
+	echo '<div class="wrap"><div id="icon-options-general" class="icon32"><br /></div><h2>'.__('Custom Settings').'</h2>';
 	$sql = "select * from " . CONFIG_TABLE . " order by niceName asc";
 	$fields = $wpdb->get_results($sql);
 	$alt = false;
@@ -125,7 +125,6 @@ function je_custom_configs_list() { // Custom Settings page
 	
 		if ($i == 1): // outputs the title only if there are settings
 			echo '
-			<h2>'.__('Custom Settings').'</h2>
 			<br />
 			<form method="post" action="">
 			<input type="hidden" name="action" value="update" />
