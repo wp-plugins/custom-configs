@@ -154,9 +154,9 @@ function je_custom_configs_list() { // Custom Settings page
 			<th class="check-column"><input type="checkbox" name="delete_'.$field->slug.'" id="delete_'.$field->slug.'" /></th>
 			<td class="post-title"><label for="'.$field->slug.'" style="display:block;text-transform:capitalize;">'.$field->niceName.'</label></td>';
 			
-			if (strlen($field->value) > 80)
+			if (strlen($field->value) > 60 && preg_match('# #',$field->value)) // display in a textarea if too long and contains a space
 				echo '<td><textarea name="'.$field->slug.'" id="'.$field->slug.'" rows="4" cols="10" style="width: 90%;">'.htmlspecialchars($field->value).'</textarea></td>';
-			else
+			else // display in a textbox
 				echo '<td><input type="text" name="'.$field->slug.'" id="'.$field->slug.'" value="'.htmlspecialchars($field->value).'" class="regular-text" style="width: 90%;" /></td>';
 		echo '
 			<td><small>'.$field->slug.'</small></td>
